@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Deep Learning for NLP",
+    "category": "Artificial Intelligence",
+    "timesRead": 3,
+    "printed": true,
+    "confidence": "High"
+  },
+  {
+    "title": "Quantum Computing Basics",
+    "category": "Quantum Computing",
+    "timesRead": 1,
+    "printed": false,
+    "confidence": "Low"
+  },
+  {
+    "title": "Advances in Machine Learning",
+    "category": "Artificial Intelligence",
+    "timesRead": 2,
+    "printed": true,
+    "confidence": "Medium"
+  },
+  {
+    "title": "Blockchain Technology",
+    "category": "Cryptography",
+    "timesRead": 4,
+    "printed": false,
+    "confidence": "High"
+  },
+  {
+    "title": "Neural Networks and Deep Learning",
+    "category": "Artificial Intelligence",
+    "timesRead": 5,
+    "printed": true,
+    "confidence": "High"
+  }
+]
