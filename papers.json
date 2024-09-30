@@ -1,37 +1,106 @@
 [
   {
-    "title": "Deep Learning for NLP",
-    "category": "Artificial Intelligence",
-    "timesRead": 3,
-    "printed": true,
-    "confidence": "High"
-  },
-  {
-    "title": "Quantum Computing Basics",
-    "category": "Quantum Computing",
-    "timesRead": 1,
-    "printed": false,
-    "confidence": "Low"
-  },
-  {
-    "title": "Advances in Machine Learning",
-    "category": "Artificial Intelligence",
-    "timesRead": 2,
-    "printed": true,
-    "confidence": "Medium"
-  },
-  {
-    "title": "Blockchain Technology",
-    "category": "Cryptography",
-    "timesRead": 4,
-    "printed": false,
-    "confidence": "High"
-  },
-  {
-    "title": "Neural Networks and Deep Learning",
-    "category": "Artificial Intelligence",
+    "title": "Attention is All You Need",
+    "category": "Foundational ML",
     "timesRead": 5,
     "printed": true,
-    "confidence": "High"
+    "confidence": "High",
+    "firstRead": "January::2022"
+  },
+  {
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "category": "Foundational ML",
+    "timesRead": 3,
+    "printed": true,
+    "confidence": "Medium",
+    "firstRead": "August::2024"
+  },
+  {
+    "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+    "category": "Vision",
+    "timesRead": 6,
+    "printed": true,
+    "confidence": "High",
+    "firstRead": "July::2024"
+  },
+  {
+    "title": "Impacts of tree and building shades on the urban heat island: Combining remote sensing, 3D digital city and spatial regression approaches",
+    "category": "Digital Twin",
+    "timesRead": 3,
+    "printed": true,
+    "confidence": "Medium",
+    "firstRead": "September::2024"
+  },
+  {
+    "title": "Classification of Tree Species and Standing Dead Trees by Fusing Uav-Based LIDAR Data and Multispectral Imagery in the 3d Deep Neural Network POINTNET++",
+    "category": "Digital Twin",
+    "timesRead": 3,
+    "printed": true,
+    "confidence": "High",
+    "firstRead": "August::2024"
+  },
+  {
+    "title": "Individual Tree Species Identification for Complex Coniferous and Broad-Leaved Mixed Forests Based on Deep Learning Combined with UAV LiDAR Data and RGB Images",
+    "category": "Digital Twin",
+    "timesRead": 2,
+    "printed": true,
+    "confidence": "Medium",
+    "firstRead": "July::2024"
+  },
+  {
+    "title": "Neural Networks are Decision Trees",
+    "category": "Foundational ML",
+    "timesRead": 1,
+    "printed": true,
+    "confidence": "Low",
+    "firstRead": "September::2024"
+  },
+  {
+    "title": "A Computational Theory on Human Stereo Vision",
+    "category": "Foundational ML",
+    "timesRead": 1,
+    "printed": true,
+    "confidence": "Low",
+    "firstRead": "June::2024"
+  },
+  {
+    "title": "An Integrated Object and Machine Learning Approach for Tree Canopy Extraction from UAV Datasets",
+    "category": "Digital Twin",
+    "timesRead": 1,
+    "printed": true,
+    "confidence": "Low",
+    "firstRead": "June::2024"
+  },
+  {
+    "title": "When LLMs step into the 3D World: A Survey and Meta-Analysis of 3D Tasks via Multi-modal Large Language Models",
+    "category": "NLP",
+    "timesRead": 1,
+    "printed": false,
+    "confidence": "Low",
+    "firstRead": "July::2023"
+  },
+  {
+    "title": "LiDAR-LLM: Exploring the Potential of Large Language Models for 3D LiDAR Understanding",
+    "category": "NLP",
+    "timesRead": 2,
+    "printed": true,
+    "confidence": "Medium",
+    "firstRead": "June::2024"
+  },
+  {
+    "title": "A deep-learning-based tree species classification for natural secondary forests using unmanned aerial vehicle hyperspectral images and LiDAR",
+    "category": "Digital Twin",
+    "timesRead": 2,
+    "printed": true,
+    "confidence": "Medium",
+    "firstRead": "June:2024"
+  },
+  {
+    "title": "How to train your ViT? Data, Augmentation, and Regularization in Vision Transformers",
+    "category": "Digital Twin",
+    "timesRead": 5,
+    "printed": true,
+    "confidence": "High",
+    "firstRead": "August:2024"
   }
 ]
