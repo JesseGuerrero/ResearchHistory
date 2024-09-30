@@ -35,40 +35,47 @@
         await loadData('all');
     });
     // Function to fetch scholar data via the Flask backend
-    async function fetchScholarData(userID, name) {
-        const url = `https://other.jessenerio.com/xmrdarkanscholar?${userID}`;
 
+
+
+    async function loadJSON() {
         try {
-            const response = await fetch(url);
+            // Fetch the JSON file
+            const response = await fetch('/hiscores.json');
+
+            // Check if the fetch was successful
             if (!response.ok) {
-                throw new Error("Network response was not ok");
+                throw new Error('Network response was not ok');
             }
+
+            // Parse the JSON into a JavaScript object
             const data = await response.json();
 
-            return { name: name, h_index: data.h_index, citations: data.citations };
+            // Log the JavaScript object to the console
+            console.log(data);
+            return data
         } catch (error) {
-            console.error("Failed to fetch the page for userID:", userID, error);
-            return { name: name, h_index: -1, citations: -1 };
+            console.error('Failed to load JSON:', error);
         }
     }
 
-    // Function to load data from the txt files
     async function loadData(demographic) {
-        const response = await fetch(`/players/${demographic}.txt`);
-        const textData = await response.text();
+        // Load the JSON data
+        const scholarData = await loadJSON();
 
-        // Handle different newline formats (either \n or \r\n)
-        const players = textData.split(/\r?\n/).filter(line => line.trim() !== "").map(line => {
-            const [userID, name] = line.split('=');
-            return { userID, name };
-        });
+        if (!scholarData) {
+            console.error('No data to process');
+            return;
+        }
+        let filteredData = scholarData
+        if(!demographic.includes("all"))
+            filteredData = scholarData.filter(scholar => scholar.type === demographic);
 
-        console.log(players);  // For debugging to ensure all lines are read
+        // Render the table with the filtered data
+        renderTable(filteredData);
 
-        const scholarData = await Promise.all(players.map(player => fetchScholarData(player.userID, player.name)));
-
-        renderTable(scholarData);
-        await sortTable('Citations')
+        // Sort the table by 'Citations'
+        await sortTable('citations');
     }
 
 
