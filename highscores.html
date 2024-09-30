@@ -54,7 +54,7 @@
 
     // Function to load data from the txt files
     async function loadData(demographic) {
-        const response = await fetch(`/ResearchHistory/players/${demographic}.txt`);
+        const response = await fetch(`/players/${demographic}.txt`);
         const textData = await response.text();
 
         // Handle different newline formats (either \n or \r\n)
