@@ -93,7 +93,7 @@
     "timesRead": 2,
     "printed": true,
     "confidence": "Medium",
-    "firstRead": "June:2024"
+    "firstRead": "June::2024"
   },
   {
     "title": "How to train your ViT? Data, Augmentation, and Regularization in Vision Transformers",
@@ -101,6 +101,6 @@
     "timesRead": 5,
     "printed": true,
     "confidence": "High",
-    "firstRead": "August:2024"
+    "firstRead": "August::2024"
   }
 ]

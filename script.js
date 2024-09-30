@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             papers = data;
 
-            // Sort the papers by 'First Read' date
-            papers.sort((a, b) => compareDates(a.firstRead, b.firstRead));
+            // Sort the papers by 'First Read' date from latest to oldest
+            papers.sort((a, b) => compareDates(b.firstRead, a.firstRead));
 
             // Extract categories and counts
             categoryCounts = getCategoryCounts(papers);
@@ -74,6 +74,9 @@ function populateTable(papersToDisplay) {
     const tbody = document.querySelector('#papersTable tbody');
     tbody.innerHTML = '';
 
+    // Sort the papers to display by 'First Read' date from latest to oldest
+    papersToDisplay.sort((a, b) => compareDates(b.firstRead, a.firstRead));
+
     papersToDisplay.forEach(paper => {
         const tr = document.createElement('tr');
 
@@ -99,6 +102,9 @@ function filterPapers() {
         const matchesCategory = selectedCategory === '' || paper.category === selectedCategory;
         return matchesTitle && matchesCategory;
     });
+
+    // Sort the filtered papers by 'First Read' date from latest to oldest
+    filteredPapers.sort((a, b) => compareDates(b.firstRead, a.firstRead));
 
     populateTable(filteredPapers);
 
