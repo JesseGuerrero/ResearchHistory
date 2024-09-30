@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Scores</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background-color: lightgray;">
+<div class="container my-4">
+    <h1 class="text-center">High Scores</h1>
+    <div class="text-center my-3">
+        <button class="btn btn-primary mx-1" onclick="loadData('all')">Show All</button>
+        <button class="btn btn-secondary mx-1" onclick="loadData('students')">Show Students</button>
+        <button class="btn btn-secondary mx-1" onclick="loadData('teachers')">Show Teachers</button>
+    </div>
+
+    <table class="table table-hover">
+        <thead class="table-dark">
+        <tr>
+            <th onclick="sortTable('Name')">Name</th>
+            <th onclick="sortTable('H-index')">H-index</th>
+            <th onclick="sortTable('Citations')">Citations</th>
+        </tr>
+        </thead>
+        <tbody id="highscoreTable">
+        <!-- Data will be dynamically inserted here -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", async function() {
+        await loadData('all');
+    });
+    // Function to fetch scholar data via the Flask backend
+    async function fetchScholarData(userID, name) {
+        const url = `http://xmr.darkan.org:40025/scholar/${userID}`;
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            const data = await response.json();
+
+            return { name: name, h_index: data.h_index, citations: data.citations };
+        } catch (error) {
+            console.error("Failed to fetch the page for userID:", userID, error);
+            return { name: name, h_index: -1, citations: -1 };
+        }
+    }
+
+    // Function to load data from the txt files
+    async function loadData(demographic) {
+        const response = await fetch(`players/${demographic}.txt`);
+        const textData = await response.text();
+
+        // Handle different newline formats (either \n or \r\n)
+        const players = textData.split(/\r?\n/).filter(line => line.trim() !== "").map(line => {
+            const [userID, name] = line.split('=');
+            return { userID, name };
+        });
+
+        console.log(players);  // For debugging to ensure all lines are read
+
+        const scholarData = await Promise.all(players.map(player => fetchScholarData(player.userID, player.name)));
+
+        renderTable(scholarData);
+        await sortTable('Citations')
+    }
+
+
+    // Function to render the table
+    function renderTable(data) {
+        const tableBody = document.getElementById("highscoreTable");
+        tableBody.innerHTML = ""; // Clear existing table rows
+        data.forEach(player => {
+            const row = `<tr>
+                                <td>${player.name}</td>
+                                <td>${player.h_index || 'N/A'}</td>
+                                <td>${player.citations || 'N/A'}</td>
+                             </tr>`;
+            tableBody.innerHTML += row;
+        });
+    }
+
+    // Function to sort the table data
+    function sortTable(key) {
+        const table = document.getElementById("highscoreTable");
+        const rows = Array.from(table.querySelectorAll("tr"));
+        const sorted = rows.sort((a, b) => {
+            const aValue = a.querySelector(`td:nth-child(${key === 'Name' ? 1 : key === 'H-index' ? 2 : 3})`).innerText;
+            const bValue = b.querySelector(`td:nth-child(${key === 'Name' ? 1 : key === 'H-index' ? 2 : 3})`).innerText;
+            if (key === 'Name') {
+                return aValue.localeCompare(bValue);
+            } else {
+                return parseInt(bValue) - parseInt(aValue);
+            }
+        });
+        table.innerHTML = "";
+        sorted.forEach(row => table.appendChild(row));
+    }
+
+    // Initial load of all players
+    loadData('all');
+</script>
+</body>
+</html>
