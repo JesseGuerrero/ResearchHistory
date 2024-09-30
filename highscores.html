@@ -36,7 +36,7 @@
     });
     // Function to fetch scholar data via the Flask backend
     async function fetchScholarData(userID, name) {
-        const url = `https://jessenerio.com/xmrdarkanscholar/scholar/${userID}`;
+        const url = `https://jessenerio.com/xmrdarkanscholar?${userID}`;
 
         try {
             const response = await fetch(url);
