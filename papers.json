@@ -1,5 +1,21 @@
 [
   {
+    "title": "Segment Anything",
+    "category": "Vision",
+    "timesRead": 2,
+    "printed": true,
+    "confidence": "High",
+    "firstRead": "October::2024"
+  },
+  {
+    "title": "Learning Transferable Visual Models From Natural Language Supervision",
+    "category": "Vision",
+    "timesRead": 3,
+    "printed": true,
+    "confidence": "High",
+    "firstRead": "October::2024"
+  },
+  {
     "title": "Attention is All You Need",
     "category": "Foundational ML",
     "timesRead": 5,
