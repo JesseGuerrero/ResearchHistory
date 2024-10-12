@@ -61,12 +61,12 @@ while True:
         json.dump(getHSInfo(), json_file)
         print("dumped " + str(datetime.now().date()))
         # Git add command
-        subprocess.run(["git", "add", "."])
+        #subprocess.run(["git", "add", "."])
 
         # Git commit command
-        commit_message = f"Updated hiscores on {str(datetime.now().date())}"
-        subprocess.run(["git", "commit", "-m", commit_message])
+        #commit_message = f"Updated hiscores on {str(datetime.now().date())}"
+        #subprocess.run(["git", "commit", "-m", commit_message])
 
         # Git push command
-        subprocess.run(["git", "push", "origin", "main"])
+        #subprocess.run(["git", "push", "origin", "main"])
     time.sleep(60*60*24*3)
