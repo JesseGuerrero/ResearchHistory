@@ -1,5 +1,21 @@
 [
   {
+    "title": "A systematic review of urban heat island and heat waves research (1991–2022)",
+    "category": "Digital Twin",
+    "timesRead": 1,
+    "printed": true,
+    "confidence": "Low",
+    "firstRead": "October::2024"
+  },
+  {
+    "title": "CLLMate: A Multimodal LLM for Weather and Climate Events Forecasting",
+    "category": "Multimodal",
+    "timesRead": 1,
+    "printed": true,
+    "confidence": "Medium",
+    "firstRead": "October::2024"
+  },
+  {
     "title": "Segment Anything",
     "category": "Vision",
     "timesRead": 2,
@@ -89,7 +105,7 @@
   },
   {
     "title": "When LLMs step into the 3D World: A Survey and Meta-Analysis of 3D Tasks via Multi-modal Large Language Models",
-    "category": "NLP",
+    "category": "Multimodal",
     "timesRead": 1,
     "printed": false,
     "confidence": "Low",
@@ -97,7 +113,7 @@
   },
   {
     "title": "LiDAR-LLM: Exploring the Potential of Large Language Models for 3D LiDAR Understanding",
-    "category": "NLP",
+    "category": "Multimodal",
     "timesRead": 2,
     "printed": true,
     "confidence": "Medium",
