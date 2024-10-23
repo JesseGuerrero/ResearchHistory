@@ -69,4 +69,4 @@ while True:
 
         # Git push command
         #subprocess.run(["git", "push", "origin", "main"])
-    time.sleep(60*60*24*3)
+#     time.sleep(60*60*24*3)
