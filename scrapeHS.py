@@ -56,10 +56,10 @@ import subprocess
 
 from datetime import datetime
 
-while True:
-    with open("hiscores.json", "w") as json_file:
-        json.dump(getHSInfo(), json_file)
-        print("dumped " + str(datetime.now().date()))
+
+with open("hiscores.json", "w") as json_file:
+    json.dump(getHSInfo(), json_file)
+    print("dumped " + str(datetime.now().date()))
         # Git add command
         #subprocess.run(["git", "add", "."])
 
