@@ -1,5 +1,13 @@
 [
   {
+    "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+    "category": "Vision",
+    "timesRead": 1,
+    "printed": true,
+    "confidence": "High",
+    "firstRead": "October::2024"
+  },
+  {
     "title": "Denoising Diffusion Probabilistic Models",
     "category": "Vision",
     "timesRead": 1,
