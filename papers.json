@@ -1,5 +1,37 @@
 [
   {
+    "title": "So2Sat LCZ42: A Benchmark Dataset for Global Local Climate Zones Classification",
+    "category": "Heat Island",
+    "timesRead": 1,
+    "printed": true,
+    "confidence": "High",
+    "firstRead": "November::2024"
+  },
+  {
+    "title": "Forecasting Land Surface Temperature Using Artificial Neural Network",
+    "category": "Heat Island",
+    "timesRead": 1,
+    "printed": true,
+    "confidence": "High",
+    "firstRead": "November::2024"
+  },
+  {
+    "title": "Intracity Temperature Estimation by Physics Informed Neural Network Using Modeled Forcing Meteorology and Multispectral Satellite Imagery",
+    "category": "Heat Island",
+    "timesRead": 1,
+    "printed": true,
+    "confidence": "High",
+    "firstRead": "November::2024"
+  },
+  {
+    "title": "DF4LCZ: A SAM-Empowered Data Fusion Framework for Scene-Level Local Climate Zone Classification",
+    "category": "Heat Island",
+    "timesRead": 1,
+    "printed": true,
+    "confidence": "High",
+    "firstRead": "November::2024"
+  },
+  {
     "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
     "category": "Vision",
     "timesRead": 1,
@@ -17,7 +49,7 @@
   },
   {
     "title": "A systematic review of urban heat island and heat waves research (1991–2022)",
-    "category": "Digital Twin",
+    "category": "Heat Island",
     "timesRead": 1,
     "printed": true,
     "confidence": "Low",
@@ -73,7 +105,7 @@
   },
   {
     "title": "Impacts of tree and building shades on the urban heat island: Combining remote sensing, 3D digital city and spatial regression approaches",
-    "category": "Digital Twin",
+    "category": "Heat Island",
     "timesRead": 3,
     "printed": true,
     "confidence": "Medium",
