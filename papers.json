@@ -1,5 +1,29 @@
 [
   {
+    "title": "Image fusion transformer",
+    "category": "Vision",
+    "timesRead": 1,
+    "printed": true,
+    "confidence": "High",
+    "firstRead": "January::2025"
+  },
+  {
+    "title": "DDFM: denoising diffusion model for multi-modality image fusion",
+    "category": "Vision",
+    "timesRead": 1,
+    "printed": true,
+    "confidence": "Low",
+    "firstRead": "January::2025"
+  },
+  {
+    "title": "Machine Learning Techniques to Map the Impact of Urban Heat Island: Investigating the City of Jeddah",
+    "category": "Heat Island",
+    "timesRead": 1,
+    "printed": true,
+    "confidence": "High",
+    "firstRead": "January::2025"
+  },
+  {
     "title": "Estimating the effects of vegetation and increased albedo on the urban heat island effect with spatial causal inference",
     "category": "Heat Island",
     "timesRead": 2,
